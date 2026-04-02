@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>High Spark Technology</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            padding: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            background: black;
+            letter-spacing: 2px;
+        }
+
+        marquee {
+            background: red;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        .services {
+            margin-top: 40px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 10px;
+            border: none;
+            border-radius: 25px;
+            background: orange;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: yellow;
+            transform: scale(1.1);
+        }
+
+        #proxyInfo {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(0,0,0,0.6);
+            border-radius: 10px;
+            display: none;
+        }
+
+        #formSection {
+            display: none;
+            margin-top: 20px;
+            background: black;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 15px;
+            background: black;
+        }
+
+        input, select, textarea {
+            padding: 10px;
+            width: 80%;
+            border-radius: 8px;
+            border: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<header>HIGH SPARK TECHNOLOGY</header>
+
+<marquee>
+Welcome to High Spark Technology | Proxy | Interview | Java | USA Jobs Support 🔥
+</marquee>
+
+<h2>Your Career Growth Partner</h2>
+
+<div class="services">
+    <button onclick="showProxy()">Proxy Support</button>
+    <button onclick="showProxy()">Interview Support</button>
+    <button onclick="showProxy()">Job Support</button>
+    <button onclick="showForm()">Apply / Join Now</button>
+</div>
+
+<!-- FORM -->
+<div id="formSection">
+
+    <h2>Apply / Join Now</h2>
+
+    <form onsubmit="sendToWhatsApp(); return false;">
+        <input type="text" id="name" placeholder="Your Name" required><br><br>
+        <input type="email" id="email" placeholder="Your Email" required><br><br>
+        <input type="text" id="phone" placeholder="Phone Number" required><br><br>
+
+        <select id="service" required>
+            <option value="">Select Service</option>
+            <option>Proxy Support</option>
+            <option>Interview Support</option>
+            <option>Java Training</option>
+        </select><br><br>
+
+        <textarea id="message" placeholder="Message"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</div>
+
+<!-- INFO -->
+<div id="proxyInfo">
+    <h3>Our Support</h3>
+    <p>
+        Proxy Support, Interview Support, Java Training, Coding Programs,
+        USA Jobs Support, Job Assistance, Career Guidance
+    </p>
+</div>
+
+<br>
+
+<button onclick="contact()">Contact Us</button>
+
+<footer>
+© 2026 High Spark Technology
+</footer>
+
+<script>
+function showProxy() {
+    document.getElementById("proxyInfo").style.display = "block";
+}
+
+function showForm() {
+    document.getElementById("formSection").style.display = "block";
+}
+
+function contact() {
+    window.location.href = "https://wa.me/8790546639";
+}
+
+// ✅ WhatsApp Submit
+function sendToWhatsApp() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let service = document.getElementById("service").value;
+    let messageText = document.getElementById("message").value;
+
+    let message = "🔥 New Application:%0A"
+        + "Name: " + name + "%0A"
+        + "Email: " + email + "%0A"
+        + "Phone: " + phone + "%0A"
+        + "Service: " + service + "%0A"
+        + "Message: " + messageText;
+
+    window.open("https://wa.me/8790546639?text=" + message);
+}
+</script>
+
+</body>
+</html>
